@@ -52,15 +52,12 @@ namespace Um32Core.Tests
         public void Platter_OperatorNumber()
         {
             Platter p = new Platter(new byte[] { 255, 255, 255, 255 });
-
             Assert.AreEqual((uint)15, p.OperatorNumber);
 
             p = new Platter(new byte[] { 0xF0, 255, 255, 255 });
-
             Assert.AreEqual((uint)15, p.OperatorNumber);
 
             p = new Platter(new byte[] { 0x90, 255, 255, 255 });
-
             Assert.AreEqual((uint)0x9, p.OperatorNumber);
         }
 
@@ -69,11 +66,9 @@ namespace Um32Core.Tests
         public void Platter_RegisterA()
         {
             Platter p = new Platter(new byte[] { 0, 0, 255, 255 });
-
             Assert.AreEqual((uint)7, p.RegisterA);
 
             p = new Platter(new byte[] { 0, 0, 1, 0 });
-
             Assert.AreEqual((uint)4, p.RegisterA);
         }
 
@@ -81,11 +76,9 @@ namespace Um32Core.Tests
         public void Platter_RegisterB()
         {
             Platter p = new Platter(new byte[] { 0, 0, 0, 255 });
-
             Assert.AreEqual((uint)7, p.RegisterB); 
             
             p = new Platter(new byte[] { 0, 0, 0, 40 });
-
             Assert.AreEqual((uint)5, p.RegisterB);
         }
 
@@ -93,13 +86,10 @@ namespace Um32Core.Tests
         public void Platter_RegisterC()
         {
             Platter p = new Platter(new byte[] { 0, 0, 0, 255 });
-
             Assert.AreEqual((uint)7, p.RegisterC);
 
             p = new Platter(new byte[] { 0, 0, 0, 4 });
-
             Assert.AreEqual((uint)4, p.RegisterC);
         }
-
     }
 }
